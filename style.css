@@ -1,0 +1,84 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+#cart-modal { transition: transform 0.3s ease-in-out; }
+.cart-open { transform: translateX(0) !important; }
+.backdrop-blur { transition: opacity 0.3s ease-in-out; }
+
+/* Animación de pulso para el botón de WhatsApp */
+@keyframes pulse {
+    50% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+}
+#whatsapp-fab {
+    position: fixed; bottom: 25px; right: 25px;
+    background-color: #25D366; color: white;
+    width: 60px; height: 60px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 30;
+    transition: transform 0.2s ease-in-out;
+    animation: pulse 2.5s infinite;
+}
+#whatsapp-fab:hover { 
+    transform: scale(1.1);
+    animation-play-state: paused; /* Pausa la animación al pasar el mouse */
+}
+
+/* --- Animaciones --- */
+
+/* Estado inicial para las animaciones de scroll (fade y scale) */
+.category-card, .product-card {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.4s ease;
+}
+
+/* Estado visible (activado por JS) */
+.category-card.is-visible, .product-card.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animación en hover para categorías */
+.category-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Animación en hover para productos (solo sombra) */
+.product-card:hover {
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Slider con CSS Puro --- */
+@keyframes slide {
+    0% { left: 0; }
+    20% { left: 0; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+    50% { left: -200%; }
+    70% { left: -200%; }
+    75% { left: -300%; }
+    95% { left: -300%; }
+    100% { left: -400%; }
+}
+.slider {
+    overflow: hidden;
+}
+.slider figure {
+    position: relative;
+    width: 500%; /* 100% por cada imagen */
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slide infinite;
+}
+.slider figure img {
+    width: 20%; /* 100% / 5 imágenes */
+    height: 100%;
+    
+    object-fit: contain; /* <-- CAMBIO: 'contain' para que la imagen se vea completa */
+    float: left;
+}

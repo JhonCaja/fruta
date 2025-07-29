@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biolife - Tu Tienda de Frutas</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Enlace a tu hoja de estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+    <!-- ========== ENCABEZADO ========== -->
+    <header class="bg-white shadow-md sticky top-0 z-40">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <a href="#" class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-green-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" /></svg>
+                    <span class="text-2xl font-bold text-gray-800">Biolife</span>
+                </a>
+                <button id="open-cart-btn" class="relative flex items-center justify-center p-2 rounded-full hover:bg-gray-100 transition-colors">
+                    <svg class="h-7 w-7 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c.51 0 .962-.328 1.093-.828l2.857-9.591A.75.75 0 0018.5 3H4.23z" /></svg>
+                    <span id="cart-counter" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== SLIDER / HERO (PANTALLA COMPLETA) ========== -->
+    <div class="w-full h-96 md:h-[500px] relative flex items-center justify-center text-center overflow-hidden mb-16">
+        <div class="slider absolute inset-0 w-full h-full bg-gray-200">
+            <figure>
+                <!-- CAMBIA LAS IMÁGENES DEL SLIDER AQUÍ -->
+                <img src="/imagenes/slaider1.svg" alt="Logo Frutería Luna">
+                <img src="/imagenes/slaider2.png" alt="Naranjas Frescas">
+                <img src="/imagenes/slaider3.png" alt="Fresas Rojas">
+                <img src="/imagenes/slaider4.avif" alt="Arándanos Azules">
+                <img src="/imagenes/slaider5.avif" alt="Duraznos Jugosos">
+            </figure>
+        </div>
+        <div class="absolute inset-0 bg-black/50 z-[3]"></div>
+        <div class="relative z-10 text-white p-4" style="z-index: 4;">
+             <h1 class="text-4xl md:text-6xl font-extrabold bg-gradient-to-r from-lime-300 to-green-400 bg-clip-text text-transparent drop-shadow-lg">Nuestro Catálogo Fresco</h1>
+             <p class="mt-4 text-lg md:text-xl text-white/90 drop-shadow-md">Frutas 100% orgánicas, directo del campo a tu mesa.</p>
+        </div>
+    </div>
+
+    <!-- ========== CONTENIDO PRINCIPAL ========== -->
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 mb-16">
+        <!-- ========== SECCIÓN DE CATEGORÍAS DESTACADAS ========== -->
+        <section class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Columna Izquierda (4 items) -->
+                <div class="md:col-span-2 grid grid-cols-2 gap-4">
+                    <div class="category-card group relative rounded-xl overflow-hidden cursor-pointer h-64">
+                        <img src="/imagenes/granada.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4"><h3 class="text-white text-xl font-bold">Granada</h3></div>
+                        <div class="absolute inset-0 ring-4 ring-transparent group-hover:ring-lime-400 transition-all duration-300 rounded-xl"></div>
+                    </div>
+                    <div class="category-card group relative rounded-xl overflow-hidden cursor-pointer h-64">
+                        <img src="/imagenes/arandanos.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4"><h3 class="text-white text-xl font-bold">Arándanos</h3></div>
+                        <div class="absolute inset-0 ring-4 ring-transparent group-hover:ring-lime-400 transition-all duration-300 rounded-xl"></div>
+                    </div>
+                     <div class="category-card group relative rounded-xl overflow-hidden cursor-pointer h-64">
+                        <img src="/imagenes/mango.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4"><h3 class="text-white text-xl font-bold">Mango</h3></div>
+                        <div class="absolute inset-0 ring-4 ring-transparent group-hover:ring-lime-400 transition-all duration-300 rounded-xl"></div>
+                    </div>
+                    <div class="category-card group relative rounded-xl overflow-hidden cursor-pointer h-64">
+                        <img src="/imagenes/fresa.jpg" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-4"><h3 class="text-white text-xl font-bold">Frambuesas</h3></div>
+                        <div class="absolute inset-0 ring-4 ring-transparent group-hover:ring-lime-400 transition-all duration-300 rounded-xl"></div>
+                    </div>
+                </div>
+                <!-- Columna Derecha (1 item alto) -->
+                <div class="category-card group relative rounded-xl overflow-hidden cursor-pointer h-full min-h-[300px] md:min-h-0">
+                    <img src="/imagenes/kiwi.avif" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-6"><h3 class="text-white text-2xl font-bold">Kiwi</h3></div>
+                    <div class="absolute inset-0 ring-4 ring-transparent group-hover:ring-lime-400 transition-all duration-300 rounded-xl"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Título para la sección de productos -->
+        <section>
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800">Todos Nuestros Productos</h2>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Las tarjetas de productos se insertarán aquí con JavaScript -->
+            </div>
+        </section>
+    </main>
+    
+    <!-- ========== PIE DE PÁGINA ========== -->
+    <footer class="bg-gray-100 border-t mt-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center text-gray-600">
+            <p>&copy; 2024 Biolife. Todos los derechos reservados. | <a href="#" id="admin-login-link" class="text-gray-500 hover:text-green-600 text-sm">Admin</a></p>
+        </div>
+    </footer>
+
+    <!-- ========== BOTÓN FLOTANTE DE WHATSAPP ========== -->
+    <a id="whatsapp-fab" href="#" target="_blank" rel="noopener noreferrer" title="Contáctanos por WhatsApp">
+        <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.8 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.5-7c-18.9-29.4-28.9-63.3-28.9-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+    </a>
+
+    <!-- ========== CARRITO DE COMPRAS MODAL ========== -->
+    <div id="cart-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden backdrop-blur-sm"></div>
+    <div id="cart-modal" class="fixed top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full flex flex-col">
+        <!-- Header del Carrito -->
+        <div class="flex items-center justify-between p-5 border-b">
+            <h2 id="cart-title" class="text-2xl font-bold text-gray-800">Tu Carrito</h2>
+            <button id="close-cart-btn" class="p-2 rounded-full hover:bg-gray-200 transition-colors"><svg class="h-6 w-6 text-gray-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg></button>
+        </div>
+
+        <!-- Vista del Carrito (Paso 1) -->
+        <div id="cart-view" class="flex flex-col flex-grow">
+            <div id="cart-items" class="flex-grow p-5 overflow-y-auto">
+                <!-- Los items del carrito se insertarán aquí -->
+            </div>
+            <div class="p-5 border-t bg-gray-50">
+                <div class="flex justify-between items-center mb-4">
+                    <span class="text-lg font-semibold text-gray-800">Total:</span>
+                    <span id="cart-total" class="text-2xl font-bold text-green-600">$0.00</span>
+                </div>
+                <button id="proceed-to-delivery-btn" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition-all text-lg">
+                    Continuar
+                </button>
+            </div>
+        </div>
+
+        <!-- Vista del Formulario de Entrega (Paso 2) -->
+        <div id="delivery-form-view" class="hidden flex-col flex-grow p-5 overflow-y-auto">
+            <form id="delivery-form">
+                <!-- Opciones de Entrega -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">Seleccione Opción De Entrega</h3>
+                    <div class="space-y-2">
+                        <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-green-50 has-[:checked]:border-green-500 transition-all">
+                            <input type="radio" name="delivery_option" value="domicilio" class="h-4 w-4 text-green-600 border-gray-300 focus:ring-green-500" checked>
+                            <span class="ml-3 text-sm font-medium text-gray-700">A domicilio</span>
+                        </label>
+                        <label class="flex items-center p-3 border rounded-lg has-[:checked]:bg-green-50 has-[:checked]:border-green-500 transition-all">
+                            <input type="radio" name="delivery_option" value="para_llevar" class="h-4 w-4 text-green-600 border-gray-300 focus:ring-green-500">
+                            <span class="ml-3 text-sm font-medium text-gray-700">Para llevar</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Información del Cliente -->
+                <div class="space-y-4">
+                    <h3 class="text-lg font-semibold text-gray-800">Información Del Cliente</h3>
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Nombre*</label>
+                        <input type="text" id="name" name="name" placeholder="Nombre" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700">Móvil*</label>
+                        <input type="tel" id="phone" name="phone" placeholder="Telefono" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div id="address-field">
+                        <label for="address" class="block text-sm font-medium text-gray-700">Dirección de Entrega*</label>
+                        <input type="text" id="address" name="address" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <div>
+                        <label for="note" class="block text-sm font-medium text-gray-700">Nota</label>
+                        <textarea id="note" name="note" rows="2" placeholder="Nota" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+                    </div>
+                </div>
+                <div class="mt-6 flex items-center gap-4">
+                    <button type="button" id="back-to-cart-btn" class="w-full bg-gray-200 text-gray-700 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition-all">
+                        Volver
+                    </button>
+                    <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition-all">
+                        Confirmar y Enviar por WhatsApp
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- ========== MODAL DE LOGIN (ADMIN) ========== -->
+    <div id="admin-login-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-80 z-50 flex items-center justify-center p-4 hidden">
+        <div id="admin-login-modal" class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-sm transform transition-all scale-95 opacity-0">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-1">Acceso de Administrador</h2>
+            <p class="text-center text-gray-500 mb-6">Ingresa tus credenciales</p>
+            <form id="admin-login-form">
+                <div class="space-y-4">
+                    <div>
+                        <label for="admin-password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                        <input type="password" id="admin-password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-green-500 focus:border-green-500">
+                    </div>
+                    <p id="admin-login-error" class="text-red-500 text-sm text-center hidden">Contraseña incorrecta.</p>
+                </div>
+                <div class="mt-6">
+                    <button type="submit" class="w-full bg-green-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                        Ingresar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Enlace a tu archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
