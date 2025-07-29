@@ -15,11 +15,11 @@
     <div class="container mx-auto p-4 sm:p-6 lg:p-8">
         <h1 class="text-3xl font-bold text-gray-800 mb-6">Panel de Administración</h1>
         <button id="logout-btn" class="bg-red-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-red-600 transition-colors">
-                Cerrar Sesión
-            </button>
+            Cerrar Sesión
+        </button>
 
         <!-- Sección para Añadir Nuevo Producto -->
-        <div class="bg-white p-6 rounded-xl shadow-md mb-8">
+        <div class="bg-white p-6 rounded-xl shadow-md mb-8 mt-4">
             <h2 class="text-xl font-semibold mb-4">Añadir Nuevo Producto</h2>
             <form id="add-product-form" class="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
                 <div>
@@ -38,20 +38,22 @@
             </form>
         </div>
 
-        <!-- Tabla de Productos Existentes -->
-        <div class="bg-white rounded-xl shadow-md overflow-hidden">
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Producto</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio (S/)</th>
-                        <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
-                    </tr>
-                </thead>
-                <tbody id="admin-product-list" class="bg-white divide-y divide-gray-200">
-                    <!-- Los productos se cargarán aquí -->
-                </tbody>
-            </table>
+        <!-- Tabla de Productos Existentes con scroll responsive -->
+        <div class="bg-white rounded-xl shadow-md overflow-x-auto">
+            <div class="min-w-full inline-block align-middle">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Producto</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Precio (S/)</th>
+                            <th class="px-6 py-3 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="admin-product-list" class="bg-white divide-y divide-gray-200">
+                        <!-- Los productos se cargarán aquí -->
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 

@@ -135,7 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function removeItem(productId) { cart = cart.filter(item => item.id !== productId); updateCartView(); }
     
     function sendOrderToWhatsApp(customerData) {
-        let message = '¡Hola Biolife! 👋\n\nQuisiera confirmar mi pedido:\n\n';
+        let message = '¡Hola Fruteria Luna! 👋\n\nQuisiera confirmar mi pedido:\n\n';
         message += `*DATOS DEL CLIENTE:*\n`;
         message += `*Nombre:* ${customerData.name}\n`;
         message += `*Móvil:* ${customerData.phone}\n`;

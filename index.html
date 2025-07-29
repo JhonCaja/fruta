@@ -39,7 +39,8 @@
         <div class="slider absolute inset-0 w-full h-full bg-gray-200">
             <figure>
                 <!-- CAMBIA LAS IMÁGENES DEL SLIDER AQUÍ -->
-                <img src="/imagenes/slaider1.svg" alt="Logo Frutería Luna">
+                 
+                <img src="/imagenes/slaider1.jpg" alt="Logo Frutería Luna">
                 <img src="/imagenes/slaider2.png" alt="Naranjas Frescas">
                 <img src="/imagenes/slaider3.png" alt="Fresas Rojas">
                 <img src="/imagenes/slaider4.avif" alt="Arándanos Azules">
@@ -102,7 +103,7 @@
             </div>
 
             <!-- Grid de Productos -->
-            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            <div id="product-grid" class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
                 <!-- Las tarjetas de productos se insertarán aquí con JavaScript -->
             </div>
         </section>
@@ -131,9 +132,7 @@
 
         <!-- Vista del Carrito (Paso 1) -->
         <div id="cart-view" class="flex flex-col flex-grow">
-            <div id="cart-items" class="flex-grow p-5 overflow-y-auto">
-                <!-- Los items del carrito se insertarán aquí -->
-            </div>
+            <div id="cart-items" class="flex-grow p-5 overflow-y-auto"></div>
             <div class="p-5 border-t bg-gray-50">
                 <div class="flex justify-between items-center mb-4">
                     <span class="text-lg font-semibold text-gray-800">Total:</span>
@@ -148,7 +147,6 @@
         <!-- Vista del Formulario de Entrega (Paso 2) -->
         <div id="delivery-form-view" class="hidden flex-col flex-grow p-5 overflow-y-auto">
             <form id="delivery-form">
-                <!-- Opciones de Entrega -->
                 <div class="mb-6">
                     <h3 class="text-lg font-semibold text-gray-800 mb-2">Seleccione Opción De Entrega</h3>
                     <div class="space-y-2">
@@ -162,8 +160,6 @@
                         </label>
                     </div>
                 </div>
-
-                <!-- Información del Cliente -->
                 <div class="space-y-4">
                     <h3 class="text-lg font-semibold text-gray-800">Información Del Cliente</h3>
                     <div>
